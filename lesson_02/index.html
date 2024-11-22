@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Sign Up</h1>
+    <form>
+        <!-- Дефолтный блочный элемент - div-->
+        <!-- Дефолтный строчный элемент - span-->
+        <div>   
+            <label for="name">Name: </label>
+            <input id="name" type="text" placeholder="Enter your name" required />
+        </div> 
+
+        <br/>
+
+        <div>   
+            <label for="email">Email: </label>
+            <input id="email" type="email" placeholder="Enter your email" required />
+        </div> 
+
+        <br/>
+
+        <div>   
+            <label for="password">Password: </label>
+            <input id="password" type="password" placeholder="Enter your email" maxlength="16" minlength="8" required />
+        </div> 
+        
+        <br/>
+        
+        <div>   
+            <label for="hobby">Hobby: </label>
+            <select id="hobby"  required>
+                <option value = ""> Choose your </option>
+                <option value = "chess">Chess - best sport </option>
+                <option value = "Football">Football - best sport </option>
+            </select>
+        </div> 
+
+        <br/>
+
+        <button>Finish!</button>
+      </form>
+  </body>
+</html>
