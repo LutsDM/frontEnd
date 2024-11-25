@@ -1,0 +1,25 @@
+body {
+    background-color:rgba(204, 200, 240, 0.2);
+}
+
+
+form {
+    font-size: 18px; 
+    width: 50%; /* Ширина формы */
+    max-width: 500px; /* Максимальная ширина формы */
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.3);
+    margin: 0 auto; /* Центрирование по горизонтали */
+    :hover {
+        box-shadow: 4px 4px 15px rgba(204, 200, 240, 0.3);
+        transform: scale(1.02);
+    }
+}
+
+form:hover {
+    box-shadow: 4px 4px 15px rgba(204, 200, 240, 0.3);
+    transform: scale(1.02);
+}
