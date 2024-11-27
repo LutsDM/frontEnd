@@ -1,50 +1,56 @@
 
     
 
-div {    
+.cosmic {    
+    position:absolute;
     width: 600px;
     height: 400px;
     background-image: url("./img/bg.jpg");
+    background-size:cover;
+}
+
+.cosmic img {
+    position: absolute;
 }
 
 .planet1 {
-    position:relative;
-    bottom: 103px; 
-    left: 30%; 
+    
+    top: 21px; 
+    left: 180px; 
     
 }
 
 .planet2 {
-    position: relative;
-    right: 70px
+    left: 52px;
+    top: 71px
 }
 
 .planet3 {
-    position: relative;
-    top: 138px;
-    right: 155px;
+
+    top: 139px;
+    left: 140px;
 }
 
 .asteroid{
-    position: relative;
-    bottom: 185px;
+
+    top: 70px;
     left: 438px;
 }
 
 .ufo{
-    position: relative;
-    top: 31px;
-    right: 2px;
+
+    top: 300px;
+    left: 113px;
 }
 
 .spaceship{
-    position: relative;
-    bottom: 106px;
-    left: 79px;
+
+    top: 161px;
+    left: 141px;
 }
 
 .superman{
-    position: relative;
-    top: 84px;
-    left: 305px;
+
+    bottom: 0px;
+    right: 31px;
 }

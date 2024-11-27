@@ -34,20 +34,12 @@ h1 {
 
 .main{
     position: relative;
+    padding: 20px;
 }
 
-/* top, left, right, bottom*/
-
-.left, .right {
-    position:absolute;
-    width: 48%;
-    top: 15px;
-}
-
-.left {
-    left: 15px
-}
-
-.right {
-    right: 15px;
+.first-line, .second-line{
+    display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+  padding: 7px;
 }
