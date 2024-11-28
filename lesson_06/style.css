@@ -1,0 +1,44 @@
+#buttonback {
+    position: relative;
+    left: 50%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animal-gallery {
+    width: 89%;
+    min-height: 500px;
+    padding: 15px 0px;
+    border: 1.5px solid;
+    border-radius: 10px;
+    display: flex;
+    /* промежуток между элементами*/
+    gap: 10px;
+    /* центрировать*/
+    justify-content: center;
+    /*
+    justify-content:end 
+    justify-content: space-between */
+    align-items: center;
+    /* перенос на новую строчку*/
+    flex-wrap: wrap;
+    align-content: center;  /* отвечает за положение элементов в целом при переносе карточек*/
+}
+
+.animal-card > img {
+    width: 300px;
+}
+
+.animal-card {
+    display: flex;
+    /*поменяли главную ось с горизонтали на вертикаль */
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+    width: 350px;
+    background-color: bisque;
+}
