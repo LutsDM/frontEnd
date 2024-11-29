@@ -99,9 +99,11 @@ h6{
 
     width: 6vw;
     position: relative;
-    left: 95%;
+    left: 94%;
     background-color: #cc583e;
     color: white;
+    border-width: 2px;
+    border-color: aliceblue;
     border-radius: 5px;
     height: 50px;
 }
