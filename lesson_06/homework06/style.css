@@ -97,15 +97,12 @@ h6{
 }
 
 #buttonback {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        width: 15vw; /* Уменьшаем кнопку пропорционально */
-        background-color: #cc583e;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        padding: 2vw;
-        cursor: pointer;
-        text-align: center;
+
+    width: 100px;
+    position: relative;
+    left: 95%;
+    background-color: #cc583e;
+    color: white;
+    border-radius: 5px;
+    height: 50px;
 }
