@@ -16,7 +16,7 @@ body{
 .title {
   display: flex;
   justify-content: center;
-  font-size: 150px;
+  font-size: 6vw;
   color: hwb(0 22% 17%);
   font-family: "Lacquer", system-ui;
   font-weight: 400;
@@ -70,10 +70,6 @@ h6{
     
 }
 
-.poster-gallery {
-    
-    
-}
 
 .poster-card {
     display: flex;
