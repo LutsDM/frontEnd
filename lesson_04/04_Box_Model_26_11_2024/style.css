@@ -28,7 +28,7 @@ h1 {
     font-style: normal;
     text-align: center;
     font-size: 100px;
-    padding-top: 120px;
+    padding-top: 50px;
     color: rgba(3, 150, 100, .75)    
 }
 
@@ -42,4 +42,11 @@ h1 {
   grid-template-columns: repeat(3, 1fr); 
   gap: 20px; 
   padding: 7px;
+}
+
+#buttonback {
+    width: 100px;
+    position: relative;
+    left: 47%;
+    
 }

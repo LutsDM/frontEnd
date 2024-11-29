@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Lacquer&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Covered+By+Your+Grace&family=Lacquer&family=Raleway:ital,wght@0,100..900;1,100..900&family=Staatliches&display=swap');
+
+* {
+    text-decoration: none;
+}
+
+body{
+    background-image: url("./img/grunge-wall-texture\ \(1\).jpg");
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.title {
+    font-size: 200px;
+    color: hwb(0 22% 17%);
+    font-family: "Lacquer", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  justify-self: center;
+  
+  
+}
+
+.header{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 10px; 
+}
+
+.header a {
+    font-size: 40px;
+    color: #cc583e;
+    background: whitesmoke; 
+    border: 2px solid black;
+    border-radius: 15px;
+    border-color: black;
+    padding: 5px;
+    text-align: center;
+    
+}
+
+
+h4{
+    font-size: 45px;
+    
+}
+
+h5{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+h6{
+    color: gold;
+    margin-top: 0;
+}
+
+.poster-card > a img {
+    width: 300px; 
+    height: 300px;
+    max-width: 190px; 
+    
+}
+
+.poster-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.poster-card {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px;
+    gap: 30px;
+}
+
+.poster-card > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    color: #cc583e;
+    font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}

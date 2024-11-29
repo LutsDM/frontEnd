@@ -54,3 +54,10 @@
     bottom: 0px;
     right: 31px;
 }
+
+#buttonback {
+    width: 100px;
+    position: relative;
+    left: 47%;
+    
+}
