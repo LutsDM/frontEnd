@@ -14,7 +14,7 @@ body{
 }
 
 .title {
-    font-size: 300px;
+    font-size: 200px;
     color: hwb(0 22% 17%);
     font-family: "Lacquer", system-ui;
   font-weight: 400;
@@ -57,7 +57,6 @@ h5{
 h6{
     color: gold;
     margin-top: 0;
-    text-align: center; 
 }
 
 .poster-card > a img {
@@ -89,33 +88,28 @@ h6{
     font-size: 30px;
     color: #cc583e;
     font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  width: 100%; 
-    height: auto; 
-    max-width: 190px; 
+    font-weight: 400;
+    font-style: normal;
+    justify-content: center;  
+    text-align: center; 
+
+
+
+#buttonback {
+    position: fixed; 
+    top: 10px; 
+    right: 10px; 
+    width: 100px; 
+    background-color: #cc583e; 
+    color: white; 
+    border: none; 
+    border-radius: 5px;
+    padding: 10px; 
+    cursor: pointer; 
+    text-align: center; 
+   
 }
 
-
-#buttonback   {
-        position: fixed; 
-        top: 10px; 
-        right: 10px; 
-        width: auto; 
-        background-color: white; 
-        color: #cc583e; 
-        border: 2px solid #cc583e;
-        border-radius: 5px; 
-        padding: 10px 20px;
-        font-size: 16px; 
-        text-align: center; 
-
-   }
-    
-    #buttonback:hover {
-        background-color: #cc583e;
-        color: white; 
-    }
 
 
 
