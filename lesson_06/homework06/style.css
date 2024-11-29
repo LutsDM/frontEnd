@@ -14,7 +14,7 @@ body{
 }
 
 .title {
-    font-size: 200px;
+    font-size: 300px;
     color: hwb(0 22% 17%);
     font-family: "Lacquer", system-ui;
   font-weight: 400;
@@ -50,13 +50,14 @@ h4{
 }
 
 h5{
-    font-size: 32px;
+    font-size: 25px;
     margin-bottom: 10px;
 }
 
 h6{
     color: gold;
     margin-top: 0;
+    text-align: center; 
 }
 
 .poster-card > a img {
@@ -69,7 +70,7 @@ h6{
 .poster-gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     
 }
 
@@ -78,6 +79,7 @@ h6{
     flex-wrap: wrap;
     margin: 30px;
     gap: 30px;
+    flex: 1 0 21%; 
 }
 
 .poster-card > a {
@@ -89,27 +91,31 @@ h6{
     font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
+  width: 100%; 
+    height: auto; 
+    max-width: 190px; 
 }
 
-a {
-    text-decoration: none;
-}
 
+#buttonback   {
+        position: fixed; 
+        top: 10px; 
+        right: 10px; 
+        width: auto; 
+        background-color: white; 
+        color: #cc583e; 
+        border: 2px solid #cc583e;
+        border-radius: 5px; 
+        padding: 10px 20px;
+        font-size: 16px; 
+        text-align: center; 
 
+   }
+    
+    #buttonback:hover {
+        background-color: #cc583e;
+        color: white; 
+    }
 
-#buttonback {
-    position: fixed; 
-    top: 10px; 
-    right: 10px; 
-    width: 100px; 
-    background-color: #cc583e; 
-    color: white; 
-    border: none; 
-    border-radius: 5px;
-    padding: 10px; 
-    cursor: pointer; 
-    text-align: center; 
-   
-}
 
 
