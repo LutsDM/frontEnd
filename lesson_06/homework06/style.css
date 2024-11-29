@@ -111,5 +111,8 @@ h6{
     border-width: 1px;
     border-color: aliceblue;
     border-radius: 5px;
-
+    display: flex;         
+    justify-content: center;  
+    align-items: center;      
+    font-size: 1vw;           
 }
