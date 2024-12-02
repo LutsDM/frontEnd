@@ -1,0 +1,672 @@
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: lightyellow;
+    margin: 0;    
+}
+
+.header{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-end;
+    background-position: center;    
+    height: 500px;
+    background-image: url(./img/1233.png);
+    background-repeat: no-repeat;
+    
+    
+}   
+
+h2 {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    font-family: 'Get schwifty'; 
+    src: url('./fonts/get_schwifty.ttf') format('truetype'); 
+    font-weight: bold; 
+    font-size: 50px;
+    color:rgb(50, 155, 44);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    
+}
+
+
+
+.series-frames{
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 160px;
+    margin: 100px 140px 150px 140px;
+    
+}
+
+.series {
+ display: flex;
+    justify-content: center;
+    color: rgb(254, 251, 251);
+    font-size: 40px;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7), -1px -1px 0 rgba(0, 0, 0, 0.7), 1px -1px 0 rgba(0, 0, 0, 0.7), -1px 1px 0 rgba(0, 0, 0, 0.7);
+    font-style: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.S1E1 {
+    background-image: url(./img/231013162437-rick-and-morty-voice-actors-reveal.jpg);
+    border: 2px solid black;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+ 
+.S1E2 {
+    background-image: url(./img/231016-rick-and-morty-cs-7502c0.webp);
+    border: 2px solid black;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.S1E3 {
+    background-image: url(./img/Rick-and-Morty-kadr.jpg);
+    border: 2px solid black;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.S1E4 {
+    background-image: url(./img/rick-morty-peace-season-5.jpg);
+    border: 2px solid black;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.S1E5 {
+    background-image: url(./img/rick-morty-season-6-dc65188.jpg);
+    border: 2px solid black;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.S1E6 {
+    background-image: url(./img/1.jpg);
+    border: 2px solid black;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.S1E7 {
+    background-image: url(./img/2.jpg);
+    border: 2px solid black;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.S1E8 {
+    background-image: url(./img/3.webp);
+    border: 2px solid black;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.S1E9 {
+    background-image: url(./img/11111.webp);
+    border: 2px solid black;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.S1E10 {
+    background-image: url(./img/222222.webp);
+    border: 2px solid black;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.S2E1 {
+    background-image: url(./img/4.webp);
+    border: 2px solid black;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.S2E2 {
+    background-image: url(./img/6.jpg);
+    border: 2px solid black;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.S2E3 {
+    background-image: url(./img/7.jpg);
+    border: 2px solid black;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.S2E4 {
+    background-image: url(./img/10.jpg);
+    border: 2px solid black;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.S2E5 {
+    background-image: url(./img/01.webp);
+    border: 2px solid black;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.S2E6 {
+    background-image: url(./img/02.jpg);
+    border: 2px solid black;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.S2E7 {
+    background-image: url(./img/03.jpg);
+    border: 2px solid black;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.S2E8 {
+    background-image: url(./img/04.webp);
+    border: 2px solid black;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.S2E9 {
+    background-image: url(./img/333333.webp);
+    border: 2px solid black;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.S2E10 {
+    background-image: url(./img/44444.webp);
+    border: 2px solid black;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+ 
+.series:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5); 
+}
+
+
+
+.series.S1E1::before {
+    content: "Pilot";
+    font-size: 25px;
+    position: relative;
+    top: 90px;
+}
+
+
+
+.series.S1E1:hover::before {
+    content: "Crazy adventure, interdimensional chaos..."; 
+    font-size: 25px;
+    opacity: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  
+        1px -1px 0 rgba(0, 0, 0, 0.7),   
+        -1px 1px 0 rgba(0, 0, 0, 0.7);
+    
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+
+.series.S1E2::before {
+    content: "Lawn Mower Dog";
+    font-size: 25px;
+    position: relative;
+    top: 90px;
+}
+
+
+
+.series.S1E2:hover::before {
+    content: "Dog minds, dog logic..."; 
+    font-size: 25px;
+    opacity: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  
+        1px -1px 0 rgba(0, 0, 0, 0.7),   
+        -1px 1px 0 rgba(0, 0, 0, 0.7);
+    
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+
+.series.S1E3::before {
+    content: "Anatomy Park";
+    font-size: 25px;
+    position: relative;
+    top: 90px;
+}
+
+.series.S1E3:hover::before {
+    content: "Human body amusement park..."; 
+    font-size: 25px;
+    opacity: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  
+        1px -1px 0 rgba(0, 0, 0, 0.7),   
+        -1px 1px 0 rgba(0, 0, 0, 0.7);
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+.series.S1E4::before {
+    content: "M. Night Shaym-Aliens!";
+    font-size: 25px;
+    position: relative;
+    top: 90px;
+}
+
+.series.S1E4:hover::before {
+    content: "Alien simulation mystery..."; 
+    font-size: 25px;
+    opacity: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  
+        1px -1px 0 rgba(0, 0, 0, 0.7),   
+        -1px 1px 0 rgba(0, 0, 0, 0.7);
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+
+.series.S1E5::before {
+    content: "Raising Gazorpazorp";
+    font-size: 25px;
+    position: relative;
+    top: 90px;
+}
+
+.series.S1E5:hover::before {
+    content: "Teenage robot rebellion..."; 
+    font-size: 25px;
+    opacity: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  
+        1px -1px 0 rgba(0, 0, 0, 0.7),   
+        -1px 1px 0 rgba(0, 0, 0, 0.7);
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+
+.series.S1E6::before {
+    content: "Ricksy Business";
+    font-size: 25px;
+    position: relative;
+    top: 90px;
+}
+
+.series.S1E6:hover::before {
+    content: "Party at the house..."; 
+    font-size: 25px;
+    opacity: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  
+        1px -1px 0 rgba(0, 0, 0, 0.7),   
+        -1px 1px 0 rgba(0, 0, 0, 0.7);
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+
+.series.S1E7::before {
+    content: "Total Rickall";
+    font-size: 25px;
+    position: relative;
+    top: 90px;
+}
+
+.series.S1E7:hover::before {
+    content: "Parasites create false memories..."; 
+    font-size: 25px;
+    opacity: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  
+        1px -1px 0 rgba(0, 0, 0, 0.7),   
+        -1px 1px 0 rgba(0, 0, 0, 0.7);
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+
+.series.S1E8::before {
+    content: "Get Schwifty";
+    font-size: 25px;
+    position: relative;
+    top: 90px;
+}
+
+.series.S1E8:hover::before {
+    content: "Planetary destruction, musical crisis..."; 
+    font-size: 25px;
+    opacity: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  
+        1px -1px 0 rgba(0, 0, 0, 0.7),   
+        -1px 1px 0 rgba(0, 0, 0, 0.7);
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+.series.S1E9::before {
+    content: "Raising Gazorpazorp";
+    font-size: 25px;
+    position: relative;
+    top: 90px;
+}
+
+.series.S1E9:hover::before {
+    content: "Teenage rebellion on Gazorpazorp..."; 
+    font-size: 25px;
+    opacity: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  
+        1px -1px 0 rgba(0, 0, 0, 0.7),   
+        -1px 1px 0 rgba(0, 0, 0, 0.7);
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+
+.series.S1E10::before {
+    content: "Close Rick-Counters";
+    font-size: 25px;
+    position: relative;
+    top: 90px;
+}
+
+.series.S1E10:hover::before {
+    content: "Parallel universes meet in an epic way..."; 
+    font-size: 25px;
+    opacity: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  
+        1px -1px 0 rgba(0, 0, 0, 0.7),   
+        -1px 1px 0 rgba(0, 0, 0, 0.7);
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+
+.series.S1E11::before {
+    content: "Ricksy Business";
+    font-size: 25px;
+    position: relative;
+    top: 90px;
+}
+
+.series.S1E11:hover::before {
+    content: "House party chaos ensues..."; 
+    font-size: 25px;
+    opacity: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  
+        1px -1px 0 rgba(0, 0, 0, 0.7),   
+        -1px 1px 0 rgba(0, 0, 0, 0.7);
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+
+.series.S1E12::before {
+    content: "Rick and Morty Jack";
+    font-size: 25px;
+    position: relative;
+    top: 90px;
+}
+
+.series.S1E12:hover::before {
+    content: "Adventures in a high-risk situation..."; 
+    font-size: 25px;
+    opacity: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  
+        1px -1px 0 rgba(0, 0, 0, 0.7),   
+        -1px 1px 0 rgba(0, 0, 0, 0.7);
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+
+.series.S1E13::before {
+    content: "Rick and Morty, The Lost Episode";
+    font-size: 25px;
+    position: relative;
+    top: 90px;
+}
+
+.series.S1E13:hover::before {
+    content: "A lost episode with twists..."; 
+    font-size: 25px;
+    opacity: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  
+        1px -1px 0 rgba(0, 0, 0, 0.7),   
+        -1px 1px 0 rgba(0, 0, 0, 0.7);
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+.series.S2E1::before {
+    content: "A Rickle in Time";
+    font-size: 25px;
+    position: relative;
+    top: 90px;
+}
+
+.series.S2E1:hover::before {
+    content: "Time travel chaos and uncertainty..."; 
+    font-size: 25px;
+    opacity: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  
+        1px -1px 0 rgba(0, 0, 0, 0.7),   
+        -1px 1px 0 rgba(0, 0, 0, 0.7);
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+
+.series.S2E2::before {
+    content: "Lawn Mower Dog";
+    font-size: 25px;
+    position: relative;
+    top: 90px;
+}
+
+.series.S2E2:hover::before {
+    content: "A surreal journey through dreams..."; 
+    font-size: 25px;
+    opacity: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  
+        1px -1px 0 rgba(0, 0, 0, 0.7),   
+        -1px 1px 0 rgba(0, 0, 0, 0.7);
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+
+.series.S2E3::before {
+    content: "Auto Erotic";
+    font-size: 25px;
+    position: relative;
+    top: 90px;
+}
+
+.series.S2E3:hover::before {
+    content: "Consciousness merging with technology..."; 
+    font-size: 25px;
+    opacity: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  
+        1px -1px 0 rgba(0, 0, 0, 0.7),   
+        -1px 1px 0 rgba(0, 0, 0, 0.7);
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+
+.series.S2E4::before {
+    content: "Total Rickall";
+    font-size: 25px;
+    position: relative;
+    top: 90px;
+}
+
+.series.S2E4:hover::before {
+    content: "The house is filled with parasites..."; 
+    font-size: 25px;
+    opacity: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  
+        1px -1px 0 rgba(0, 0, 0, 0.7),   
+        -1px 1px 0 rgba(0, 0, 0, 0.7);
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+
+.series.S2E5::before {
+    content: "Get Schwifty";
+    font-size: 25px;
+    position: relative;
+    top: 90px;
+}
+
+.series.S2E5:hover::before {
+    content: "Alien invasion and rockstar moments..."; 
+    font-size: 25px;
+    opacity: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  
+        1px -1px 0 rgba(0, 0, 0, 0.7),   
+        -1px 1px 0 rgba(0, 0, 0, 0.7);
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+
+.series.S2E6::before {
+    content: "The Ricks Must Be Crazy";
+    font-size: 25px;
+    position: relative;
+    top: 90px;
+}
+
+.series.S2E6:hover::before {
+    content: "Exploring a microverse within a car battery..."; 
+    font-size: 25px;
+    opacity: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  
+        1px -1px 0 rgba(0, 0, 0, 0.7),   
+        -1px 1px 0 rgba(0, 0, 0, 0.7);
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+
+.series.S2E7::before {
+    content: "Big Trouble in Little Sanchez";
+    font-size: 25px;
+    position: relative;
+    top: 90px;
+}
+
+.series.S2E7:hover::before {
+    content: "Rick's younger clone faces his demons..."; 
+    font-size: 25px;
+    opacity: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  
+        1px -1px 0 rgba(0, 0, 0, 0.7),   
+        -1px 1px 0 rgba(0, 0, 0, 0.7);
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+
+.series.S2E8::before {
+    content: "Interdimensional Cable 2";
+    font-size: 25px;
+    position: relative;
+    top: 90px;
+}
+
+.series.S2E8:hover::before {
+    content: "More interdimensional TV adventures..."; 
+    font-size: 25px;
+    opacity: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  
+        1px -1px 0 rgba(0, 0, 0, 0.7),   
+        -1px 1px 0 rgba(0, 0, 0, 0.7);
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+.series.S2E9::before {
+    content: "Look Who's Purging Now";
+    font-size: 25px;
+    position: relative;
+    top: 90px;
+}
+
+.series.S2E9:hover::before {
+    content: "A planet where purging is legal..."; 
+    font-size: 25px;
+    opacity: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  
+        1px -1px 0 rgba(0, 0, 0, 0.7),   
+        -1px 1px 0 rgba(0, 0, 0, 0.7);
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+
+.series.S2E10::before {
+    content: "The Wedding Squanchers";
+    font-size: 25px;
+    position: relative;
+    top: 90px;
+}
+
+.series.S2E10:hover::before {
+    content: "A wedding with unforeseen complications..."; 
+    font-size: 25px;
+    opacity: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  
+        1px -1px 0 rgba(0, 0, 0, 0.7),   
+        -1px 1px 0 rgba(0, 0, 0, 0.7);
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
