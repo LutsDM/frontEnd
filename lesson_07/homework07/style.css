@@ -33,7 +33,10 @@ h2 {
     justify-content: center;
     align-items: start;
     font-family: 'Get schwifty'; 
-    src: url('./fonts/get_schwifty.ttf') format('truetype'); 
+    src:
+        url('fonts/get_schwifty-webfont.woff2') format('woff2'),
+        url('fonts/get_schwifty-webfont.woff') format('woff'), 
+        url('./fonts/get_schwifty.ttf') format('truetype'); 
     font-weight: bold; 
     font-size: 50px;
     color:rgb(50, 155, 44);
