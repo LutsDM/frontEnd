@@ -42,8 +42,6 @@ h2 {
     
 }
 
-
-
 .series-frames{
     display: grid;
     gap: 16px;
@@ -70,8 +68,6 @@ h2 {
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-
 
 .S1E1 {
     background-image: url(./img/231013162437-rick-and-morty-voice-actors-reveal.jpg);
