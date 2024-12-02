@@ -56,7 +56,6 @@ h2 {
 
 .series {
  display: flex;
-    justify-content: center;
     color: rgb(254, 251, 251);
     font-size: 40px;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7), -1px -1px 0 rgba(0, 0, 0, 0.7), 1px -1px 0 rgba(0, 0, 0, 0.7), -1px 1px 0 rgba(0, 0, 0, 0.7);
