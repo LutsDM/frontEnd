@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'WubbaLubbaDubDub';
+    src: 
+        url('./fonts/WubbaLubbaDubDub.otf') format('opentype'), /* OTF формат */
+        url('./fonts/WubbaLubbaDubDub.ttf') format('truetype'); /* TTF формат */
+}
 
 body{
     display: flex;
@@ -16,33 +22,29 @@ body{
     cursor: pointer; 
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  background-position: center;
-  height: 50vh;
-  background-size: contain; 
-  background-image: url(./img/1233.png);
-  background-repeat: no-repeat;
-}
+.header{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-end;
+    background-position: center;    
+    height: 500px;
+    background-image: url(./img/1233.png);
+    background-repeat: no-repeat;
+    
+    
+}   
+
 
 h2 {
     display: flex;
     justify-content: center;
     align-items: start;
-    font-family: 'Get schwifty'; 
-    src:
-        url('fonts/get_schwifty-webfont.woff2') format('woff2'),
-        url('fonts/get_schwifty-webfont.woff') format('woff'), 
-        url('./fonts/get_schwifty.ttf') format('truetype'); 
-    font-weight: bold; 
+    font-weight: bold;
     font-size: 50px;
-    color:rgb(50, 155, 44);
+    font-family: 'WubbaLubbaDubDub', sans-serif; /* Укажите шрифт */
+    color: rgb(50, 155, 44);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin: 0;
-    
 }
 
 .series-frames{
