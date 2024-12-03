@@ -19,7 +19,7 @@ body{
 
 .main-img{
     height:450px;
-    width: 10;
+    background-size: cover;
     background-image: url("./img/shutterstock_1549382906.jpg");
     background-repeat: no-repeat;
       
@@ -47,7 +47,26 @@ body{
     justify-content: center;
 }
 
+.background-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-solid {
+    justify-content: center;
+    size: 100px;
+}
+
 .gallery {
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
     justify-content: center;
     background-color: F5F5F5;
     display: grid;
@@ -58,13 +77,18 @@ body{
 
 }
 
+.copyright-icon {
+    font-size: 10px;
+    margin: 0 0 8px 0;
+}
+
 .card-item{
     background-color: F5F5F5;
 }
 
 .photo{
+    position: relative;
     height: 235px;
-    width: 313;
     background-size: cover
 }
 
