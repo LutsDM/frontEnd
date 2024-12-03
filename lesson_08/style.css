@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: lightyellow;
+    margin: 0;    
+}
+
+.main-img{
+    height:450px;
+    background-image: url("./img/shutterstock_1549382906.jpg");
+      
+}
+
+.main-img h1 {
+    position: relative;
+    left: 110px; 
+    top: 348px; 
+    font-size: 48px; 
+    color: #FFFFFF;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
