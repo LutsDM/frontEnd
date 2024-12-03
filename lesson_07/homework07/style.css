@@ -25,17 +25,17 @@ body{
     z-index: 1;
 }
 
-.header{
-    display: flex; 
-    flex-direction: column; 
-    justify-content: flex-end;
-    background-position: center;    
-    height: 500px;
-    background-image: url(./img/1233.png);
-    background-repeat: no-repeat;
-    
-    
-}   
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-position: center;
+  height: 50vh;
+  background-size: contain; 
+  background-image: url(./img/1233.png);
+  background-repeat: no-repeat;
+}
 
 
 h2 {
@@ -689,3 +689,13 @@ footer {
     background-color: lightgreen;
     padding: 20px;
 }
+
+@media (max-width: 669px) {
+    header {
+      background-color: rgb(67, 199, 67);
+    }
+  
+    .grid-gallery div {
+      height: 170px;
+    }
+  }
