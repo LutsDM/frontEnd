@@ -3,16 +3,25 @@
     padding: 0;
 }
 
-body{
+body{   
+    
+    background-color: F5F5F5;
+    margin: 0;    
+}
+
+.main {
     display: flex;
     flex-direction: column;
-    background-color: lightyellow;
-    margin: 0;    
+    
+    
+   
 }
 
 .main-img{
     height:450px;
+    width: 10;
     background-image: url("./img/shutterstock_1549382906.jpg");
+    background-repeat: no-repeat;
       
 }
 
@@ -24,3 +33,107 @@ body{
     color: #FFFFFF;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+.title{
+    position: relative;
+    left: 140px;
+    top:100px
+    
+
+}
+
+.gallery-container{
+    display: flex;
+    justify-content: center;
+}
+
+.gallery {
+    justify-content: center;
+    background-color: F5F5F5;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 3fr));
+    grid-auto-rows: auto;
+    margin: 100px 140px 150px 140px;
+
+}
+
+.card-item{
+    background-color: F5F5F5;
+}
+
+.photo{
+    height: 235px;
+    width: 313;
+    background-size: cover
+}
+
+p {
+    margin: 10px 0 0 0; 
+}
+
+.P0 {
+    background-image: url("./img/1.jpg");
+}
+
+.P1 {
+    background-image: url("./img/2.jpg");
+}
+
+.P2 {
+    background-image: url("./img/5.jpg");
+}
+
+.P3 {
+    background-image: url("./img/4.jpg");
+}
+.P4 {
+    background-image: url("./img/5.jpg");
+          
+}
+.P5 {
+    background-image: url("./img/6.jpg");
+          
+}
+.P6 {
+    background-image: url("./img/7.jpg");
+          
+}
+.P7 {
+    background-image: url("./img/8.jpeg");
+          
+}
+.P8 {
+    background-image: url("./img/9.jpg");
+          
+}
+.P9 {
+    background-image: url("./img/10.jpg");
+          
+}
+.P10 {
+    background-image: url("./img/11.jpg");
+          
+}
+.P11 {
+    background-image: url("./img/12.jpg");
+          
+}
+.P12 {
+    background-image: url("./img/13.jpg");
+          
+}
+.P13 {
+    background-image: url("./img/14.jpg");
+          
+}
+.P14 {
+    background-image: url("./img/15.jpg");
+          
+}
+.P15 {
+    background-image: url("./img/16.jpg");
+          
+}
+
+
