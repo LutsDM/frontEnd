@@ -11,7 +11,11 @@ body{
 
 .main {
     display: flex;
-    flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh; 
+  margin: 0;
     
     
    
@@ -42,10 +46,7 @@ body{
 
 }
 
-.gallery-container{
-    display: flex;
-    justify-content: center;
-}
+
 
 .background-button{
     position: absolute;
@@ -65,6 +66,7 @@ body{
 }
 
 .gallery {
+    
     font-family: 'Arial', sans-serif;
     font-weight: 400;
     justify-content: center;
