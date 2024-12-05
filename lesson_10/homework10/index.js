@@ -14,6 +14,7 @@ btn.addEventListener("click", () => {
   // работайте с clonedBtn
   // ваш код начинается здесь
   document.body.appendChild(clonedBtn);
+});
 
 clonedBtn.addEventListener('click', () => {
 btn.style.backgroundColor = "#9c4a1a";
