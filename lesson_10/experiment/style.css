@@ -1,4 +1,5 @@
 body{
+    background-color: linen;
     display: flex;
     justify-content: center;  
     align-items: center;      
@@ -13,7 +14,7 @@ body{
     gap: 12px;
 }
 
-#red-button {
+#red-button, #button1, #button2, #button3 {
     height: 50px; 
     width: 150px; 
     background-color: #e64a19;       
@@ -24,7 +25,7 @@ body{
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
-#red-button:hover {
+#red-button:hover, #button1:hover #button2:hover, #button3:hover {
     background-color: #fa2109; 
     transform: scale(1.05); 
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3); 
@@ -34,62 +35,48 @@ label {
     font-size: 35px;
 }
 
-#button1 {
-    height: 50px; 
-    width: 150px; 
+#button1 {   
     background-color: #19e65d;       
-    border: none;
-    border-radius: 30px;
-    cursor: pointer; 
-    transition: all 0.3s ease; 
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
 #button1:hover {
     background-color: #19e65d;  
-    transform: scale(1.05); 
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3); 
+    
 }
 
 #button2 {
-    height: 50px; 
-    width: 150px; 
     background-color: #5b1fbd;       
-    border: none;
-    border-radius: 30px;
-    cursor: pointer; 
-    transition: all 0.3s ease; 
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
 #button2:hover {
     background-color: #5b1fbd;  
-    transform: scale(1.05); 
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3); 
 }
 
 #button3 {
-    height: 50px; 
-    width: 150px; 
     background-color: #bdad1f;       
-    border: none;
-    border-radius: 30px;
-    cursor: pointer; 
-    transition: all 0.3s ease; 
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
 #button3:hover {
     background-color: #bdad1f;  
-    transform: scale(1.05); 
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3); 
 }
 
 
 #button4 {
+    position: relative;
+    right: 100px;
+    height: 30px; 
+    width: 30px; 
+    background-color:  linen;       
+    border: none;
+    border-radius: 30px;
+    cursor: pointer; 
+    
+}
+
+
+#button5a, #button5b, #button5c {
     height: 50px; 
     width: 150px; 
-    background-color: #bdad1f;       
     border: none;
     border-radius: 30px;
     cursor: pointer; 
@@ -97,8 +84,29 @@ label {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
-#button4:hover {
-    background-color: #bdad1f;  
+#button5a:hover, #button5b:hover, #button5c:hover {
     transform: scale(1.05); 
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3); 
+}
+
+#button5a {
+    background-color: #3420e6; 
+}
+
+#button5a:hover {
+    background-color: #301dd6;  
+}
+#button5b {
+    background-color: #e6c820; 
+}
+
+#button5b:hover {
+    background-color: #d6ba1c;  
+}
+#button5c {
+    background-color: #e62062; 
+}
+
+#button5c:hover {
+    background-color: #d61d5b;  
 }
