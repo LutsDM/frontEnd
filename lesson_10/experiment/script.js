@@ -1,3 +1,4 @@
+import btn from 'btn';
 const btn1 = document.getElementById("button1");
 const clonedBtn = btn.cloneNode(true);
 clonedBtn.id = "button2";
