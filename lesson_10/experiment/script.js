@@ -16,7 +16,7 @@ redBtn.addEventListener("click", () => {
   btn1.addEventListener("click", () => {
     //повторяем
     btn1.remove();
-    title.innerText = "Это уже хамство";
+    title.innerText = "Это уже хамство!";
 
     let btn2 = document.createElement("button");
 
@@ -106,20 +106,34 @@ redBtn.addEventListener("click", () => {
 
                         btn7.addEventListener("click", () => {
                           btn7.remove();
-                          title.innerText =
-                            "Итак, финал. Какой кнопки не было?";
+                          title.innerText = "Итак, финал. Какой кнопки не было?";
+                                // запускаем цикл ведущий на фейсспалм все варианті кроме одного
+                            const buttonContainer = document.querySelector(".button-container");
+                            const buttonIds = ["button8a", "button8b", "button8c", "button8d", "button8e", "button8f"];
+                            const facepalmUrl = "./img/78074563dd90e80a969bda3e51978a58.jpg";
+                        
+                            buttonIds.forEach((id) => {
+                                let button = document.createElement("button");
+                                button.id = id;
+                                buttonContainer.append(button);
+                                button.addEventListener("click", () => {
+                                    if (id === "button8d") {
+                                        title.innerText = "Сongratulations! Ты дошел до конца!";
+                                    } else {
+                                        window.location.href = facepalmUrl;
+                                    }
+                                });
+                            });
+                        
+                        
 
-                          let btn8a = document.createElement("button");
-                          btn8a.id = "button6a";
-                          document.querySelector(".button-container").append(btn8a);
-      
-                          let btn8b = document.createElement("button");
-                          btn8b.id = "button8b";
-                          document.querySelector(".button-container").append(btn8b);
-      
-                          let btn8c = document.createElement("button");
-                          btn8c.id = "button8c";
-                          document.querySelector(".button-container").append(btn8c);
+                          
+
+
+
+
+
+
                         });
                       });
                     });
