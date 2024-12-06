@@ -152,18 +152,14 @@ redBtn.addEventListener("click", () => {
                                   .querySelector(".button-container")
                                   .append(link);
                               } else {
-                                title.innerText =
-                                "Спробуй ще. F5.";
+                                title.innerText = "Спробуй ще. F5.";
 
-                              const div = document.createElement("div");
-                              div.className = "facespalm";
+                                const div = document.createElement("div");
+                                div.className = "facespalm";
 
-                              document
-                                .querySelector(".button-container")
-                                .append(div);
-                                
-
-                               
+                                document
+                                  .querySelector(".button-container")
+                                  .append(div);
                               }
                             });
                           });
