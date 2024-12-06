@@ -14,7 +14,7 @@ body{
     gap: 12px;
 }
 
-#red-button, #button1, #button2, #button3 {
+#red-button, #button1, #button2, #button3, #button7 {
     height: 50px; 
     width: 150px; 
     background-color: #e64a19;       
@@ -25,7 +25,7 @@ body{
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
-#red-button:hover, #button1:hover #button2:hover, #button3:hover {
+#red-button:hover, #button1:hover #button2:hover, #button3:hover, #button7:hover {
     background-color: #fa2109; 
     transform: scale(1.05); 
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3); 
@@ -110,3 +110,38 @@ label {
 #button5c:hover {
     background-color: #d61d5b;  
 }
+
+#button6a, #button6b, #button6c {
+    border: none;
+    
+    background-color: #e62062; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+#button6a:hover, #button6b:hover, #button6c:hover {
+    background-color: #d61d5b;  
+    transform: scale(1.05); 
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3); 
+}
+
+#button6a {
+    height: 100px; 
+    width: 100px;
+  
+}
+
+#button6b {
+    height: 100px; 
+    width: 100px;
+    border-radius: 100px;
+
+}
+
+#button6c {
+    height: 50px; 
+    width: 100px;
+
+}
+
