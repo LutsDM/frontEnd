@@ -202,3 +202,20 @@ label {
 #button8f:hover {
     background-color: #2d1ad1;  
 }
+
+.foto {
+        
+    gap: 12px;
+    width: 200px;
+    height: 200px;
+    background-image: url(./img/123.jpg);
+    background-size: contain;
+}
+
+.facespalm {
+    gap: 12px;
+    width: 200px;
+    height: 100px;
+    background-image: url(./img/321.jpg);
+    background-size: contain;
+}

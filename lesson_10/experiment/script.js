@@ -106,34 +106,67 @@ redBtn.addEventListener("click", () => {
 
                         btn7.addEventListener("click", () => {
                           btn7.remove();
-                          title.innerText = "Итак, финал. Какой кнопки не было?";
-                                // запускаем цикл ведущий на фейсспалм все варианті кроме одного
-                            const buttonContainer = document.querySelector(".button-container");
-                            const buttonIds = ["button8a", "button8b", "button8c", "button8d", "button8e", "button8f"];
-                            const facepalmUrl = "./img/78074563dd90e80a969bda3e51978a58.jpg";
-                        
-                            buttonIds.forEach((id) => {
-                                let button = document.createElement("button");
-                                button.id = id;
-                                buttonContainer.append(button);
-                                button.addEventListener("click", () => {
-                                    if (id === "button8d") {
-                                        title.innerText = "Сongratulations! Ты дошел до конца!";
-                                    } else {
-                                        window.location.href = facepalmUrl;
-                                    }
-                                });
+                          title.innerText =
+                            "Итак, финал. Какой кнопки не было?";
+                          // запускаем цикл ведущий на фейсспалм все варианты кроме одного
+                          const buttonContainer =
+                            document.querySelector(".button-container");
+                          const buttonIds = [
+                            "button8a",
+                            "button8b",
+                            "button8c",
+                            "button8d",
+                            "button8e",
+                            "button8f",
+                          ];
+
+                          buttonIds.forEach((id) => {
+                            let button = document.createElement("button");
+                            button.id = id;
+                            buttonContainer.append(button);
+                            button.addEventListener("click", () => {
+                              button8a.remove();
+                              button8b.remove();
+                              button8c.remove();
+                              button8d.remove();
+                              button8f.remove();
+                              button8e.remove();
+                              if (id === "button8d") {
+                                title.innerText =
+                                  "Сongratulations! Ты дошел до конца!";
+
+                                const div = document.createElement("div");
+                                div.className = "foto";
+                                div.textContent = "creator";
+                                document
+                                  .querySelector(".button-container")
+                                  .append(div);
+
+                                const link = document.createElement("a");
+                                link.href =
+                                  "https://lutsdm.github.io/frontEnd/";
+                                link.textContent = "creator";
+                                link.style.display = "block";
+
+                                document
+                                  .querySelector(".button-container")
+                                  .append(link);
+                              } else {
+                                title.innerText =
+                                "Спробуй ще. F5.";
+
+                              const div = document.createElement("div");
+                              div.className = "facespalm";
+
+                              document
+                                .querySelector(".button-container")
+                                .append(div);
+                                
+
+                               
+                              }
                             });
-                        
-                        
-
-                          
-
-
-
-
-
-
+                          });
                         });
                       });
                     });
