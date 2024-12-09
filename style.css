@@ -16,7 +16,7 @@ body{
     padding: 0;
 }
 
-.header {    
+header {    
     background-image: url("./img/backgraund1.jpg");
     width: 100%;
     height: 380px;
@@ -49,7 +49,7 @@ h2 {
     
 }
 
-.footer{
+footer{
     background-color: azure;
     display: flex;
     justify-content: space-between;
@@ -62,11 +62,20 @@ h2 {
     border-color: #474646; 
 }
 
-.footer > img{
+footer > img{
     width: 100px;
     margin: 0 auto; 
 }
 
-.footer a{ 
+footer a{ 
     margin: 0 10px;
 }
+
+a {
+    text-decoration: none;
+    color: #010202;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: #0056a3;
+  }
