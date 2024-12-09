@@ -57,3 +57,15 @@ for (i = 0; i < myNumbers.length; i++) {
 console.log(
   "myNumbers: " + myNumbers + "\nmySquaredNumbers: " + mySquaredNumbers
 );
+
+
+
+const numbers = [1, 2, 3, 4, 5];
+const newNumbers = [];
+
+for (const i in numbers) {
+    console.log(numbers[i] * 2);
+    newNumbers.push(numbers[i] ** 2); // Math.pow(numbers[i], 2)
+    // newNumbers[i] = (numbers[i] * numbers[i])
+
+}
