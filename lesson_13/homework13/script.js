@@ -144,10 +144,11 @@ depositButton.addEventListener("click", (event) => {
   event.preventDefault(); //чтобы страница не перезагружалась убиваем базовую функцию кнопки
 
   //получение значений
-  const accountNumber = document.querySelector("#name").value; //сюда должо прилететь имя с формы
-  const depositAmount = parseFloat(document.querySelector("#deposit").value); //сюда должна прилететь сумма
+  const accountNumber = document.querySelector("#account").value; //ищем поле куда пользователь пишет номер счета
+  const depositAmount = parseFloat(document.querySelector("#deposit").value); //ищем поле куда пользователь пишет сумму на депозит
+  //parseFloat(...): превращает введенную строку в число с плавающей запятой. Это важно, чтобы работать с числами, а не с текстом.
 
-  //находим акк по номеру
+  //находим акк по номеру.Если такой аккаунт найден, переменная account будет ссылаться на объект этого аккаунта.
   const account = bankAccounts.find(
     (acc) => acc.accountNumber === accountNumber
   );
@@ -160,7 +161,7 @@ const withdrawButton = document.querySelector(".withdraw");
 withdrawButton.addEventListener("click", (event) => {
   event.preventDefault();
 
-  const accountNumber = document.querySelector("#name").value;
+  const accountNumber = document.querySelector("#account").value;
   const withdrawAmount = parseFloat(document.querySelector("#withdraw").value);
 
   const account = bankAccounts.find(
@@ -176,11 +177,25 @@ const displayDiv = document.querySelector(".display"); // Находим div д�
 checkButton.addEventListener("click", (event) => {
   event.preventDefault();
 
-  const accountNumber = document.querySelector("#name").value;
+  const accountNumber = document.querySelector("#account").value;
 
   const account = bankAccounts.find(
     (acc) => acc.accountNumber === accountNumber
   );
 
   account.checkBalance(displayDiv); //вызываем метод чекбаланс для выбранного аккаунта и выводим в дисплей див(наш дисплей)
+});
+
+//Работа кнопки Reset
+const resetButton = document.querySelector(".reset");
+
+resetButton.addEventListener("click", () => {
+    
+    document.querySelector("#account").value = "";
+    document.querySelector("#name").value = "";
+    document.querySelector("#deposit").value = "";
+    document.querySelector("#withdraw").value = "";
+
+    
+    displayDiv.textContent = "";
 });

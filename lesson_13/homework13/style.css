@@ -59,9 +59,11 @@ button {
 #buttonback {
     width: 100px;
     position: relative;
-    left: 90%;
+    left: 47%;
     background-color: bisque;
 }
 
 p, li{font-size: 15px;
 }
+
+.reset { background-color: #b3acab;}
