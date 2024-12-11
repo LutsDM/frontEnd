@@ -128,62 +128,66 @@ accountList.innerHTML = '';
 
 for (const account of bank) {
     //account.balance
-    // const li = document.createElement('li');
-    // li.textContent = `ID: ${account.accountNumber}, Name: ${account.accountHolderName}, Balance: ${accont.balance}`;
-    // accountList.append(li);    
+     const li = document.createElement('li');
+     li.textContent = `ID: ${account.accountNumber}, Name: ${account.accountHolderName}, Balance: ${account.balance}`;
+     accountList.append(li);     
+       
 
-    accountList.innerHTML += `<li>ID: ${account.accountNumber}, Name: ${account.accountHolderName}, Balance: ${account.balance}</li> <button>delete</button>`;
+    // accountList.innerHTML += `<li>ID: ${account.accountNumber}, Name: ${account.accountHolderName}, Balance: ${account.balance}</li>`;
 
-    const deleteButton = document.querySelector('button');
-
+     const deleteButton = document.createElement('button');
+     deleteButton.textContent = 'Delete';
+     li.appendChild(deleteButton); 
+    
     deleteButton.onclick = function() {
-    
-    //     const index = bank.indexOf(this.account);
+        li.remove();
 
-    //     for (const account of bank) {
+        // bank.forEach(account => {
+        //     for (let i = 0; i < bank.length; i++) {
+        //         if (bank[i].accountNumber === account.accountNumber) {
+        //             bank.splice(i, 1); 
+        //             break; 
+        //     }
+        //     showAccounts()
+            
+        // });
+                
+        };
+        
+    };      
     
-    //  }
-    // }
-
     // bank.forEach((account, index) => {`<li>${index + 1}.ID: ${account.accountNumber}, Name: ${account.accountHolderName}, Balance: ${account.balance}</li>`})
     
 }
 
 
-}
+
 
 const withdraw =  document.getElementById('withdraw');
 const deposit = document.getElementById('deposit');
 
 deposit.onclick = function() {
     const amountDeposit = Number(document.getElementById('amount').value);
-    const accountId = document.getElementById('accountId').value;
+    const accountId = Number(document.getElementById('accountId').value);
     
     for (const account of bank) {
-        if (account.accountNumber == accountId) {
-            account.balance += amountDeposit
-        } else {alert(`Аккаунт не найден`)}
-        return;
-        
+        if (account.accountNumber === accountId) {
+            account.deposit(amountDeposit);
+        } 
+               
     }
     showAccounts()
 }
 
 withdraw.onclick = function() {
     const amountWithdraw = Number(document.getElementById('amount').value); 
-    const accountId = document.getElementById('accountId').value; 
+    const accountId = Number(document.getElementById('accountId').value); 
     
     for (const account of bank) {
-        if (account.accountNumber == accountId) {
-            if (amountWithdraw > 0 && amountWithdraw <= account.balance) {
-                account.balance -= amountWithdraw; 
-
-                alert(`Снятие выполнено!`);
-            } else {
-                alert("Недостаточно средств.");
-            }
-            return
-        } else {alert(`Аккаунт не найден`)}
+        if (account.accountNumber === accountId) {
+            account.withdraw(amountWithdraw); 
+        } 
+             
     }
     showAccounts(); 
 }
