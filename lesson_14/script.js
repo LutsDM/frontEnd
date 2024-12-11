@@ -123,5 +123,68 @@ function createAccount() {
 }
 
 function showAccounts() {
-    // HW
+const accountList = document.getElementById('accountList');
+accountList.innerHTML = '';
+
+for (const account of bank) {
+    //account.balance
+    // const li = document.createElement('li');
+    // li.textContent = `ID: ${account.accountNumber}, Name: ${account.accountHolderName}, Balance: ${accont.balance}`;
+    // accountList.append(li);    
+
+    accountList.innerHTML += `<li>ID: ${account.accountNumber}, Name: ${account.accountHolderName}, Balance: ${account.balance}</li> <button>delete</button>`;
+
+    const deleteButton = document.querySelector('button');
+
+    deleteButton.onclick = function() {
+    
+    //     const index = bank.indexOf(this.account);
+
+    //     for (const account of bank) {
+    
+    //  }
+    // }
+
+    // bank.forEach((account, index) => {`<li>${index + 1}.ID: ${account.accountNumber}, Name: ${account.accountHolderName}, Balance: ${account.balance}</li>`})
+    
 }
+
+
+}
+
+const withdraw =  document.getElementById('withdraw');
+const deposit = document.getElementById('deposit');
+
+deposit.onclick = function() {
+    const amountDeposit = Number(document.getElementById('amount').value);
+    const accountId = document.getElementById('accountId').value;
+    
+    for (const account of bank) {
+        if (account.accountNumber == accountId) {
+            account.balance += amountDeposit
+        } else {alert(`Аккаунт не найден`)}
+        return;
+        
+    }
+    showAccounts()
+}
+
+withdraw.onclick = function() {
+    const amountWithdraw = Number(document.getElementById('amount').value); 
+    const accountId = document.getElementById('accountId').value; 
+    
+    for (const account of bank) {
+        if (account.accountNumber == accountId) {
+            if (amountWithdraw > 0 && amountWithdraw <= account.balance) {
+                account.balance -= amountWithdraw; 
+
+                alert(`Снятие выполнено!`);
+            } else {
+                alert("Недостаточно средств.");
+            }
+            return
+        } else {alert(`Аккаунт не найден`)}
+    }
+    showAccounts(); 
+}
+
