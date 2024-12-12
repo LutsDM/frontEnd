@@ -168,27 +168,44 @@ const deposit = document.getElementById('deposit');
 
 deposit.onclick = function() {
     const amountDeposit = Number(document.getElementById('amount').value);
-    const accountId = Number(document.getElementById('accountId').value);
+    const accountIdInput = Number(document.getElementById('accountId').value);
     
     for (const account of bank) {
-        if (account.accountNumber === accountId) {
+        if (account.accountNumber === accountIdInput) {
             account.deposit(amountDeposit);
         } 
                
     }
     showAccounts()
+    amount.value ="";
+    accountId.value ="";
+
 }
+
+// deposit.onclick = function() {
+//     const amountDeposit = Number(document.getElementById('amount').value);
+//     const accountId = Number(document.getElementById('accountId').value);
+//     const accountFind = bank.find(e => e.accountNumber.toString() === accountId);
+//     if (accountFind) {
+//         accountFind.deposit(amountDeposit);
+//     } else { alert (`Account not found`)
+//     }
+
+//     accountId.value ="";
+//     accountFind.value ="";
+
 
 withdraw.onclick = function() {
     const amountWithdraw = Number(document.getElementById('amount').value); 
-    const accountId = Number(document.getElementById('accountId').value); 
+    const accountIdInput = Number(document.getElementById('accountId').value); 
     
     for (const account of bank) {
-        if (account.accountNumber === accountId) {
+        if (account.accountNumber === accountIdInput) {
             account.withdraw(amountWithdraw); 
         } 
-             
     }
-    showAccounts(); 
+    showAccounts()
+    amount.value ="";
+    accountId.value ="";
 }
 
