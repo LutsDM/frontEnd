@@ -209,4 +209,4 @@ withdraw.onclick = function() {
     accountId.value ="";
 }
 
-DRY (Dont repeat yourself)
+//DRY (Dont repeat yourself)
