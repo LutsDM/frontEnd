@@ -44,16 +44,29 @@ function showAccounts() {
 
   accountList.innerHTML = "";
 
-  bank.forEach((account, index) => {
-    accountList.innerHTML += `<li>${index + 1}. ID: ${
-      account.accountNumber
-    }, Name: ${account.accountHolderName}, Balance: ${account.balance}</li>`;
-  });
+  for (const account of bank) {
+    
+     const li = document.createElement('li');
+     li.textContent = `ID: ${account.accountNumber}, Name: ${account.accountHolderName}, Balance: ${account.balance}`;
+     accountList.append(li);     
 
-  const buttonDel = 
-  const delButton = document.createElement('button')
-
-
+     const deleteButton = document.createElement('button');
+     deleteButton.textContent = 'Delete';
+     li.appendChild(deleteButton); 
+    
+     deleteButton.onclick = function () {
+      const index = bank.findIndex(e => e.accountNumber === account.accountNumber);
+      if (index !== -1) {
+        bank.splice(index, 1); 
+        showAccounts(); 
+      }
+      
+      function getRandomThreeDigitNumber() {
+        return Math.floor(Math.random() * 900) + 100;
+      }
+      &#128
+    };     
+ }
 }
 const withdraw = document.getElementById("withdraw");
 const deposit = document.getElementById("deposit");
