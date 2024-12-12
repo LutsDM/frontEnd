@@ -1,3 +1,4 @@
+
 let bankAccount = {
   accountNumber: "123456789",
   accountHolderName: "Alice",
@@ -25,12 +26,12 @@ const bank = [];
 function createAccount() {
   const nameInput = document.getElementById("name");
   const name = nameInput.value.trim();
-
   if (name) {
     bank.push({
       ...bankAccount,
       accountNumber: bank.length + 1,
       accountHolderName: name,
+      
     });
     alert("Account created successfully");
   } else {
@@ -46,10 +47,13 @@ function showAccounts() {
 
   for (const account of bank) {
     
-     const li = document.createElement('li');
-     li.textContent = `ID: ${account.accountNumber}, Name: ${account.accountHolderName}, Balance: ${account.balance}`;
-     accountList.append(li);     
+    emoji = String.fromCodePoint(128512 + Math.floor(Math.random() * 80));
 
+     const li = document.createElement('li');
+     li.textContent = `${emoji} ID: ${account.accountNumber}, Name: ${account.accountHolderName}, Balance: ${account.balance}`;
+     accountList.append(li);     
+     
+     
      const deleteButton = document.createElement('button');
      deleteButton.textContent = 'Delete';
      li.appendChild(deleteButton); 
@@ -61,10 +65,7 @@ function showAccounts() {
         showAccounts(); 
       }
       
-      function getRandomThreeDigitNumber() {
-        return Math.floor(Math.random() * 900) + 100;
-      }
-      &#128
+   
     };     
  }
 }
