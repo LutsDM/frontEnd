@@ -25,10 +25,13 @@ const bank = [];
 function createAccount() {
   const nameInput = document.getElementById("name");
   const name = nameInput.value.trim();
-  emoji = String.fromCodePoint(128512 + Math.floor(Math.random() * 80));
+
+  
+  const emoji = String.fromCodePoint(128512 + Math.floor(Math.random() * 80));
+
   if (name) {
     bank.push({
-      emoji,
+      emoji, 
       ...bankAccount,
       accountNumber: bank.length + 1,
       accountHolderName: name,
@@ -50,7 +53,7 @@ function showAccounts() {
 
     const spanId = document.createElement("span");
     spanId.id = "id";
-    spanId.textContent = `ID: ${account.accountNumber}, `;
+    spanId.textContent = `${account.emoji}ID: ${account.accountNumber}, `;
 
     const spanName = document.createElement("span");
     spanName.id = "name";
@@ -75,22 +78,33 @@ function showAccounts() {
     deleteBtn.onclick = function () {
       const answer = bank.splice(index, 1);
       li.remove();
-      showAccounts;
+      showAccounts();
 
     };
     
     editBtn.onclick = function () {
+      spanBalance.remove();
+      deleteBtn.remove();
+      editBtn.remove();
       
       const editInput = document.createElement("input");
-      editInput.value = spanName.value;
+      editInput.type = "text";
+      editInput.value = spanName.textContent.replace('Name: ', '').replace(', ', '');
+
+      spanBalance.remove;
 
       spanName.appendChild(editInput);
 
       const saveBtn = document.createElement("button");
       saveBtn.textContent = "Save";
+      
+      spanName.appendChild(editInput);
       spanName.appendChild(saveBtn);
 
-      showAccounts;
+      saveBtn.onclick = function () {
+        account.accountHolderName = editInput.value; 
+        showAccounts(); // Перерисовываем список
+      };
     };
   });
 }
