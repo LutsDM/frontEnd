@@ -21,9 +21,9 @@ body{
     display: flex;
 }
 
-.slider-item{
+.slider-item {
     min-width: 100%;
-    box-sizing:;
+    box-sizing:border-box;
 }
 
 .slider-item img {
