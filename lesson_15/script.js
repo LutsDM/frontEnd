@@ -47,7 +47,20 @@ function showAccounts() {
 
   bank.forEach((account, index) => {
     const li = document.createElement("li");
-    li.textContent = `ID: ${account.accountNumber}, Name: ${account.accountHolderName}, Balance: ${account.balance}`;
+
+    const spanId = document.createElement("span");
+    spanId.id = "id";
+    spanId.textContent = `ID: ${account.accountNumber}, `;
+
+    const spanName = document.createElement("span");
+    spanName.id = "name";
+    spanName.textContent = `Name: ${account.accountHolderName}, `;
+
+    const spanBalance = document.createElement("span");
+    spanBalance.id = "balance";
+    spanBalance.textContent = `Balance: ${account.balance}`;
+
+    li.append(spanId, spanName, spanBalance);
 
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
