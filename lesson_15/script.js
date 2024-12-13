@@ -1,4 +1,3 @@
-
 let bankAccount = {
   accountNumber: "123456789",
   accountHolderName: "Alice",
@@ -26,12 +25,13 @@ const bank = [];
 function createAccount() {
   const nameInput = document.getElementById("name");
   const name = nameInput.value.trim();
+  emoji = String.fromCodePoint(128512 + Math.floor(Math.random() * 80));
   if (name) {
     bank.push({
+      emoji,
       ...bankAccount,
       accountNumber: bank.length + 1,
       accountHolderName: name,
-      
     });
     alert("Account created successfully");
   } else {
@@ -45,29 +45,22 @@ function showAccounts() {
 
   accountList.innerHTML = "";
 
-  for (const account of bank) {
-    
-    emoji = String.fromCodePoint(128512 + Math.floor(Math.random() * 80));
+  bank.forEach((account, index) => {
+    const li = document.createElement("li");
+    li.textContent = `ID: ${account.accountNumber}, Name: ${account.accountHolderName}, Balance: ${account.balance}`;
 
-     const li = document.createElement('li');
-     li.textContent = `${emoji} ID: ${account.accountNumber}, Name: ${account.accountHolderName}, Balance: ${account.balance}`;
-     accountList.append(li);     
-     
-     
-     const deleteButton = document.createElement('button');
-     deleteButton.textContent = 'Delete';
-     li.appendChild(deleteButton); 
-    
-     deleteButton.onclick = function () {
-      const index = bank.findIndex(e => e.accountNumber === account.accountNumber);
-      if (index !== -1) {
-        bank.splice(index, 1); 
-        showAccounts(); 
-      }
-      
-   
-    };     
- }
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+
+    li.append(deleteBtn);
+    accountList.append(li);
+
+    deleteBtn.onclick = function () {
+      const answer = bank.splice(index, 1);
+      li.remove();
+      showAccounts;
+    };
+  });
 }
 const withdraw = document.getElementById("withdraw");
 const deposit = document.getElementById("deposit");
@@ -93,10 +86,10 @@ function operation(operator) {
   if (accountFind) {
     if (operator === "deposit") {
       accountFind.deposit(amount);
-      showAccounts()
+      showAccounts();
     } else {
       accountFind.withdraw(amount);
-      showAccounts()
+      showAccounts();
     }
   } else {
     alert("Account not found");
