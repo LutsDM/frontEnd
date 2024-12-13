@@ -65,12 +65,31 @@ function showAccounts() {
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
 
+    const editBtn = document.createElement("button");
+    editBtn.textContent = "Edit";
+
     li.append(deleteBtn);
+    li.append(editBtn);
     accountList.append(li);
 
     deleteBtn.onclick = function () {
       const answer = bank.splice(index, 1);
       li.remove();
+      showAccounts;
+
+    };
+    
+    editBtn.onclick = function () {
+      
+      const editInput = document.createElement("input");
+      editInput.value = spanName.value;
+
+      spanName.appendChild(editInput);
+
+      const saveBtn = document.createElement("button");
+      saveBtn.textContent = "Save";
+      spanName.appendChild(saveBtn);
+
       showAccounts;
     };
   });
