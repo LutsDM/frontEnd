@@ -26,12 +26,11 @@ function createAccount() {
   const nameInput = document.getElementById("name");
   const name = nameInput.value.trim();
 
-  
   const emoji = String.fromCodePoint(128512 + Math.floor(Math.random() * 80));
 
   if (name) {
     bank.push({
-      emoji, 
+      emoji,
       ...bankAccount,
       accountNumber: bank.length + 1,
       accountHolderName: name,
@@ -79,17 +78,28 @@ function showAccounts() {
       const answer = bank.splice(index, 1);
       li.remove();
       showAccounts();
-
     };
-    
+
+    if (account.balance > 10000) {
+      const spanGoldCard = document.createElement("span");
+      spanGoldCard.id = "goldCard";
+      spanGoldCard.textContent = "$ Gold Card $";
+      li.append(spanGoldCard);
+    }
+
     editBtn.onclick = function () {
       spanBalance.remove();
       deleteBtn.remove();
       editBtn.remove();
+
+      const goldCardElement = li.querySelector("#goldCard");
+      if (goldCardElement) goldCardElement.remove();
       
       const editInput = document.createElement("input");
       editInput.type = "text";
-      editInput.value = spanName.textContent.replace('Name: ', '').replace(', ', '');
+      editInput.value = spanName.textContent
+        .replace("Name: ", "")
+        .replace(", ", "");
 
       spanBalance.remove;
 
@@ -97,15 +107,16 @@ function showAccounts() {
 
       const saveBtn = document.createElement("button");
       saveBtn.textContent = "Save";
-      
+
       spanName.appendChild(editInput);
       spanName.appendChild(saveBtn);
 
       saveBtn.onclick = function () {
-        account.accountHolderName = editInput.value; 
-        showAccounts(); // Перерисовываем список
+        account.accountHolderName = editInput.value;
+        showAccounts(); 
       };
     };
+    
   });
 }
 const withdraw = document.getElementById("withdraw");
@@ -132,15 +143,16 @@ function operation(operator) {
   if (accountFind) {
     if (operator === "deposit") {
       accountFind.deposit(amount);
+      accountIdInput.value = "";
+      amountInput.value = "";
       showAccounts();
     } else {
       accountFind.withdraw(amount);
+      accountIdInput.value = "";
+      amountInput.value = "";
       showAccounts();
     }
   } else {
     alert("Account not found");
   }
-
-  accountIdInput.value = "";
-  amountInput.value = "";
 }
