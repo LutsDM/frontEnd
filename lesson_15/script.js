@@ -74,6 +74,29 @@ function showAccounts() {
     li.append(editBtn);
     accountList.append(li);
 
+    // sortBtn.onclick = function () {
+    //   let isAlphabetical = true;
+
+    //   sortBtn.addEventListener("click", () => {
+    //     if (isAlphabetical) {
+    //       sortBtn.textContent = "A";
+    //       sortBtn.classList.add("active");
+    //     } else {
+    //       sortBtn.textContent = "Сортировать по алфавиту";
+    //       sortBtn.classList.remove("active");
+    //     }
+    //     isAlphabetical = !isAlphabetical;
+    //   });
+
+    //   bank.sort((a, b) => {
+    //     const nameA = a.accountHolderName.toLowerCase();
+    //     const nameB = b.accountHolderName.toLowerCase();
+    //     return nameA.localeCompare(nameB);
+    //   });
+
+    //   bank.sort((a, b) => a.balance - b.balance);
+    // };
+
     deleteBtn.onclick = function () {
       const answer = bank.splice(index, 1);
       li.remove();
@@ -94,7 +117,7 @@ function showAccounts() {
 
       const goldCardElement = li.querySelector("#goldCard");
       if (goldCardElement) goldCardElement.remove();
-      
+
       const editInput = document.createElement("input");
       editInput.type = "text";
       editInput.value = spanName.textContent
@@ -113,12 +136,41 @@ function showAccounts() {
 
       saveBtn.onclick = function () {
         account.accountHolderName = editInput.value;
-        showAccounts(); 
+        showAccounts();
       };
     };
-    
   });
 }
+
+// сортировка
+const sortBtn = document.createElement("button");
+sortBtn.textContent = "A";
+show.append(sortBtn);
+sortBtn.classList.add("sort-button");
+let isAlphabetical = true;
+sortBtn.onclick = function () {
+  
+    if (isAlphabetical) {
+     
+      bank.sort((a, b) => {
+        const nameA = a.accountHolderName.toLowerCase();
+        const nameB = b.accountHolderName.toLowerCase();
+        return nameA.localeCompare(nameB);
+      });
+      
+      sortBtn.textContent = "123";
+     
+    } else {
+      bank.sort((a, b) => b.balance - a.balance);
+      sortBtn.textContent = "A";
+      
+    }
+    
+    isAlphabetical = !isAlphabetical;
+    showAccounts();
+  };
+
+
 const withdraw = document.getElementById("withdraw");
 const deposit = document.getElementById("deposit");
 
