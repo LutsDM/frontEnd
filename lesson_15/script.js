@@ -1,3 +1,4 @@
+// создание объекта а именно аккаунта
 let bankAccount = {
   accountNumber: "123456789",
   accountHolderName: "Alice",
@@ -20,8 +21,10 @@ bankAccount.checkBalance = function () {
   console.log(`Баланс Вашего аккаунта равен: ${this.balance}`);
 };
 
+//создание массива объектов/аккаунтов
 const bank = [];
 
+//функция создания новых аккаунтов
 function createAccount() {
   const nameInput = document.getElementById("name");
   const name = nameInput.value.trim();
@@ -42,12 +45,14 @@ function createAccount() {
   nameInput.value = "";
 }
 
+// дисплей банка
 function showAccounts() {
   const accountList = document.getElementById("accountList");
 
   accountList.innerHTML = "";
 
   bank.forEach((account, index) => {
+    //конструктор строки дисплея
     const li = document.createElement("li");
 
     const spanId = document.createElement("span");
@@ -62,63 +67,43 @@ function showAccounts() {
     spanBalance.id = "balance";
     spanBalance.textContent = `Balance: ${account.balance}`;
 
-    li.append(spanId, spanName, spanBalance);
+    li.append(spanId, spanName, spanBalance); // добавляем в строку
 
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "Delete";
+    const deleteBtn = document.createElement("button"); // создаем del
+    deleteBtn.textContent = "Delete"; // подписываем
 
-    const editBtn = document.createElement("button");
-    editBtn.textContent = "Edit";
+    const editBtn = document.createElement("button"); // создаем edit
+    editBtn.textContent = "Edit"; // подписываем
 
-    li.append(deleteBtn);
-    li.append(editBtn);
-    accountList.append(li);
-
-    // sortBtn.onclick = function () {
-    //   let isAlphabetical = true;
-
-    //   sortBtn.addEventListener("click", () => {
-    //     if (isAlphabetical) {
-    //       sortBtn.textContent = "A";
-    //       sortBtn.classList.add("active");
-    //     } else {
-    //       sortBtn.textContent = "Сортировать по алфавиту";
-    //       sortBtn.classList.remove("active");
-    //     }
-    //     isAlphabetical = !isAlphabetical;
-    //   });
-
-    //   bank.sort((a, b) => {
-    //     const nameA = a.accountHolderName.toLowerCase();
-    //     const nameB = b.accountHolderName.toLowerCase();
-    //     return nameA.localeCompare(nameB);
-    //   });
-
-    //   bank.sort((a, b) => a.balance - b.balance);
-    // };
+    li.append(deleteBtn); // добавляем в строку кнопку удалить
+    li.append(editBtn); // добавляем в строку кнопку редактировать
+    accountList.append(li); // добавляем саму строку в блок дисплея бянка
 
     deleteBtn.onclick = function () {
+      // функция удаления
       const answer = bank.splice(index, 1);
       li.remove();
       showAccounts();
     };
 
     if (account.balance > 10000) {
-      const spanGoldCard = document.createElement("span");
-      spanGoldCard.id = "goldCard";
-      spanGoldCard.textContent = "$ Gold Card $";
-      li.append(spanGoldCard);
+      //функция фичи Голд кард
+      const spanGoldCard = document.createElement("span"); //создаем
+      spanGoldCard.id = "goldCard"; //назначаем id
+      spanGoldCard.textContent = "$ Gold Card $"; //подписываем
+      li.append(spanGoldCard); //добавляем в строку
     }
 
     editBtn.onclick = function () {
-      spanBalance.remove();
+      //функция редактирования
+      spanBalance.remove(); //подчищаем лишние кнопки
       deleteBtn.remove();
       editBtn.remove();
 
-      const goldCardElement = li.querySelector("#goldCard");
+      const goldCardElement = li.querySelector("#goldCard"); //подчищаем голд кард так как он нам мешает в едит
       if (goldCardElement) goldCardElement.remove();
 
-      const editInput = document.createElement("input");
+      const editInput = document.createElement("input"); //меняем импут чтобы там остался только то, что нужно
       editInput.type = "text";
       editInput.value = spanName.textContent
         .replace("Name: ", "")
@@ -126,15 +111,16 @@ function showAccounts() {
 
       spanBalance.remove;
 
-      spanName.appendChild(editInput);
+      spanName.appendChild(editInput); //добавляем новый вид инпута
 
-      const saveBtn = document.createElement("button");
-      saveBtn.textContent = "Save";
+      const saveBtn = document.createElement("button"); //создаем кнопку сейв
+      saveBtn.textContent = "Save"; //подписываем
 
-      spanName.appendChild(editInput);
-      spanName.appendChild(saveBtn);
+      spanName.appendChild(editInput); //добавляем новый инпут
+      spanName.appendChild(saveBtn); //добовляем кнопку сейв
 
       saveBtn.onclick = function () {
+        //переназначаем новое значения имени пользователя аккаунтом в массиве аккаунтов и выводим в дисплей
         account.accountHolderName = editInput.value;
         showAccounts();
       };
@@ -143,33 +129,31 @@ function showAccounts() {
 }
 
 // сортировка
-const sortBtn = document.createElement("button");
-sortBtn.textContent = "A";
-show.append(sortBtn);
-sortBtn.classList.add("sort-button");
-let isAlphabetical = true;
+const sortBtn = document.createElement("button"); //создаем кнопку сортировки
+sortBtn.textContent = "A"; //подписываем
+show.append(sortBtn); //добавляем в блок, чтобы разместить его в углу дисплея
+sortBtn.classList.add("sort-button"); //прописываем кнопке класс sort-button
+let isAlphabetical = true; //устанавливаем флаг по умолчанию кнопке указывать на алфавитную сортировку (сортировки пока нет)
 sortBtn.onclick = function () {
-  
-    if (isAlphabetical) {
-     
-      bank.sort((a, b) => {
-        const nameA = a.accountHolderName.toLowerCase();
-        const nameB = b.accountHolderName.toLowerCase();
-        return nameA.localeCompare(nameB);
-      });
-      
-      sortBtn.textContent = "123";
-     
-    } else {
-      bank.sort((a, b) => b.balance - a.balance);
-      sortBtn.textContent = "A";
-      
-    }
-    
-    isAlphabetical = !isAlphabetical;
-    showAccounts();
-  };
+  //функция сортировки
 
+  if (isAlphabetical) {
+    bank.sort((a, b) => {
+      //сортировка по алфавиту
+      const nameA = a.accountHolderName.toLowerCase(); //приводим к нижнему регистру
+      const nameB = b.accountHolderName.toLowerCase();
+      return nameA.localeCompare(nameB); //возвращаем сравнение
+    });
+
+    sortBtn.textContent = "123"; //переназываем кнопку
+  } else {
+    bank.sort((a, b) => b.balance - a.balance); //сортировка по балансу
+    sortBtn.textContent = "A"; //переназываем кнопку
+  }
+
+  isAlphabetical = !isAlphabetical; //меняем флаг
+  showAccounts(); //выводим в дисплей
+};
 
 const withdraw = document.getElementById("withdraw");
 const deposit = document.getElementById("deposit");
