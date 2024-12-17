@@ -18,7 +18,7 @@ fetch("https://rickandmortyapi.com/api/character")
     charactersList.forEach(character => {
       const characterItem = document.createElement("div");
       characterItem.className = "character-item";
-      gallery.appendChild(characterItem);
+      
 
       // Изображение
       const img = document.createElement("img");
@@ -44,6 +44,8 @@ fetch("https://rickandmortyapi.com/api/character")
       originNameCharacter.id = "originName";
       originNameCharacter.textContent = `Origin: ${character.originName}`;
       characterItem.appendChild(originNameCharacter);
+
+      gallery.appendChild(characterItem);
     });
   })
 
