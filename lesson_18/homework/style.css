@@ -1,6 +1,4 @@
-body{
-    padding: 20px;
-}
+
 .grid-products {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -39,4 +37,9 @@ body{
   /* .product-card > img {
     width: 80%;
   } */
-  
+
+  #buttonback {
+    position: relative;
+    left: 97%;
+    margin: 10px;
+  }
