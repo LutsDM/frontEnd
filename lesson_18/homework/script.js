@@ -4,4 +4,4 @@ async function product() {
 
     // data.map(product => {
     // //создание карточки
-    // cons
+}
