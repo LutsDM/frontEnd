@@ -42,6 +42,12 @@ body {
 
   #buttonback {
     position: relative;
-    left: 97%;
+    top: 50px;
+    height: 25px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
     margin: 10px;
   }
