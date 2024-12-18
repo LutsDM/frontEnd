@@ -136,7 +136,7 @@ async function myLocation() {
 
   if (imgUrl) {
     img.src = imgUrl;  
-    img.alt = "city Foto";
+    img.alt = 'City Photo: ${city}';
   }
 
   wrapper.append(img);
