@@ -1,6 +1,12 @@
 const weatherApi = document.querySelector("#weather");
-const city = document.createElement("div");
-city.className = "city";
+const cityBlock = document.createElement("div");
+cityBlock.id = "city";
+const temperatureBlock = document.createElement("div");
+temperatureBlock.id = "temperature";
+const windspeedBlock = document.createElement("div");
+windspeedBlock.id = "windspeed";
+const weatherDiscr = document.createElement("div");
+weatherDiscr.id = "weatherDiscr";
 
 async function myLocation() {
   const res = await fetch("https://get.geojs.io/v1/ip/geo.json");
@@ -11,6 +17,7 @@ async function myLocation() {
   // const city = data.city;
 
   const { city, latitude, longitude } = data;
+ 
 
   console.log(latitude, longitude, city);
 
@@ -115,8 +122,14 @@ async function myLocation() {
       weatherDescription = "Weather condition not available";
       break;
   }
-  weatherApi.append(
-    `${city}, Current temperature: ${temperature} ${temperatureUnit}, Windspeed: ${windspeed} ${windspeedUnit}, Weather: ${weatherDescription} `
-  );
+
+  cityBlock.textContent = `${city}`;
+  temperatureBlock.textContent = `Current temperature: ${temperature} ${temperatureUnit}`;
+  windspeedBlock.textContent = ` Windspeed: ${windspeed} ${windspeedUnit}`;
+  weatherDiscr.textContent = `Weather description: ${weatherDescription}`;
+  
+  weatherApi.append(cityBlock, temperatureBlock, windspeedBlock,weatherDiscr);
+
+
 }
 myLocation();
