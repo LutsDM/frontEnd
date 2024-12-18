@@ -1,4 +1,6 @@
 const weatherApi = document.querySelector("#weather");
+const city = document.createElement("div");
+city.className = "city";
 
 async function myLocation() {
   const res = await fetch("https://get.geojs.io/v1/ip/geo.json");
@@ -29,55 +31,85 @@ async function myLocation() {
       weatherDescription = "Clear sky";
       break;
     case 1:
+        weatherDescription = "Mainly clear"
+        break; 
     case 2:
+        weatherDescription = "Partly cloudy"
+        break;
     case 3:
-      weatherDescription = "Mainly clear, partly cloudy, and overcast";
+      weatherDescription = "Overcast";
       break;
     case 45:
+        weatherDescription = "Fog"
+        break; 
     case 48:
-      weatherDescription = "Fog and depositing rime fog";
+      weatherDescription = "Depositing rime fog";
       break;
     case 51:
+        weatherDescription = "Drizzle: Light"
+        break; 
     case 53:
+        weatherDescription = "Drizzle: Moderate"
+        break; 
     case 55:
-      weatherDescription = "Drizzle: Light, moderate, and dense intensity";
+      weatherDescription = "Drizzle: Intensity";
       break;
     case 56:
+        weatherDescription = "Mainly clear, partly cloudy" 
+        break;
     case 57:
-      weatherDescription = "Mainly clear, partly cloudy, and overcast";
+      weatherDescription = "Overcast";
       break;
     case 61:
+        weatherDescription = "Rain: slight" 
+        break;
     case 63:
+        weatherDescription = "Rain: moderate"
+        break;
     case 65:
-      weatherDescription = "Rain: Slight, moderate and heavy intensity";
+      weatherDescription = "Rain: heavy intensity";
       break;
     case 66:
+        weatherDescription = "Freezing Rain: light"
+        break; 
     case 67:
-      weatherDescription = "Freezing Rain: Light and heavy intensity";
+      weatherDescription = "Freezing Rain: heavy intensity";
       break;
     case 71:
+        weatherDescription = "Snow fall: slight"
+        break; 
     case 73:
+        weatherDescription = "Snow fall: moderate" 
+        break;
     case 75:
-      weatherDescription = "Snow fall: Slight, moderate, and heavy intensity";
+      weatherDescription = "Snow fall: heavy intensity";
       break;
     case 77:
       weatherDescription = "Snow grains";
       break;
     case 80:
+        weatherDescription = "Rain showers: slight"
+        break; 
     case 81:
+        weatherDescription = "Rain showers: moderate"
+        break; 
     case 82:
-      weatherDescription = "Rain showers: Slight, moderate, and violent";
+      weatherDescription = "Rain showers: violent";
       break;
     case 85:
+        weatherDescription = "Snow showers slight"
+        break; 
     case 86:
-      weatherDescription = "Snow showers slight and heavy";
+      weatherDescription = "Snow showers heavy";
       break;
     case 95:
       weatherDescription = "Thunderstorm: Slight or moderate";
       break;
     case 96:
+        weatherDescription = "Thunderstorm with slight"
+        break;
     case 99:
-      weatherDescription = "Thunderstorm with slight and heavy hail";
+      weatherDescription = "Thunderstorm with  heavy hail";
       break;
     default:
       weatherDescription = "Weather condition not available";
