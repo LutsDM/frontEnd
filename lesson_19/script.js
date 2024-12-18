@@ -147,7 +147,29 @@ async function myLocation() {
   weatherDiscr.textContent = `Weather description: ${weatherDescription}`;
   
   weatherApi.append(wrapper, cityBlock, temperatureBlock, windspeedBlock,weatherDiscr);
-
+  
 
 }
-myLocation();//
+myLocation();
+
+const loader = document.getElementById('loader');
+  const weatherContainer = document.getElementById('weather');
+  
+  // Показать лоадер
+  function showLoader() {
+    loader.classList.toggle('hidden'); // Убираем класс 'hidden', чтобы показать лоадер
+    weatherContainer.classList.toggle('hidden'); // Скрываем контейнер с погодой
+  }
+  
+  // Скрыть лоадер
+  function hideLoader() {
+    loader.classList.toggle('hidden'); // Добавляем класс 'hidden', чтобы скрыть лоадер
+    weatherContainer.classList.toggle('hidden'); // Показываем контейнер с погодой
+  }
+  
+  // Имитация загрузки данных
+  showLoader(); // Показываем лоадер
+  
+  setTimeout(() => {
+    hideLoader(); // Скрываем лоадер через 3 секунды
+  }, 1000);
