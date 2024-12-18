@@ -131,7 +131,7 @@ async function myLocation() {
   const cityFotoRes = await fetch(
     `https://api.unsplash.com/search/photos?query=${city}&client_id=PA_h-Zbz2NNDwh-IZf8sX77X6tKCqlhqn-UHKcMUtk0`
   );
-  const cityFotoData = cityFotoRes.json();
+  const cityFotoData = await cityFotoRes.json();
   const imgUrl = cityFotoData.results[1]?.urls?.regular;
 
   if (imgUrl) {
