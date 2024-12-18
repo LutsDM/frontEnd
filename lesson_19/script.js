@@ -172,4 +172,4 @@ const loader = document.getElementById('loader');
   
   setTimeout(() => {
     hideLoader(); // Скрываем лоадер через 3 секунды
-  }, 1000);
+  }, 1500);
