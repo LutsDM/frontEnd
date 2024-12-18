@@ -2,7 +2,7 @@ const weatherApi = document.querySelector("#weather");
 const wrapper = document.createElement("div")
 wrapper.className = 'img-wrapper';
 const img = document.createElement("img");
-img.id = "cityFoto"
+img.id = "cityPhoto"
 
 const cityBlock = document.createElement("div");
 cityBlock.id = "city";
@@ -128,11 +128,11 @@ async function myLocation() {
       break;
   }
 
-  const cityFotoRes = await fetch(
+  const cityPhotoRes = await fetch(
     `https://api.unsplash.com/search/photos?query=${city}&client_id=PA_h-Zbz2NNDwh-IZf8sX77X6tKCqlhqn-UHKcMUtk0`
   );
-  const cityFotoData = await cityFotoRes.json();
-  const imgUrl = cityFotoData.results[1]?.urls?.regular;
+  const cityPhotoData = await cityPhotoRes.json();
+  const imgUrl = cityPhotoData.results[1]?.urls?.regular;
 
   if (imgUrl) {
     img.src = imgUrl;  
