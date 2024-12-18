@@ -1,4 +1,9 @@
 const weatherApi = document.querySelector("#weather");
+const wrapper = document.createElement("div")
+wrapper.className = 'img-wrapper';
+const img = document.createElement("img");
+img.id = "cityFoto"
+
 const cityBlock = document.createElement("div");
 cityBlock.id = "city";
 const temperatureBlock = document.createElement("div");
@@ -123,12 +128,25 @@ async function myLocation() {
       break;
   }
 
+  const cityFotoRes = await fetch(
+    `https://api.unsplash.com/search/photos?query=${city}&client_id=PA_h-Zbz2NNDwh-IZf8sX77X6tKCqlhqn-UHKcMUtk0`
+  );
+  const cityFotoData = cityFotoRes.json();
+  const imgUrl = cityFotoData.results[1]?.urls?.regular;
+
+  if (imgUrl) {
+    img.src = imgUrl;  
+    img.alt = "city Foto";
+  }
+
+  wrapper.append(img);
+  
   cityBlock.textContent = `${city}`;
   temperatureBlock.textContent = `Current temperature: ${temperature} ${temperatureUnit}`;
   windspeedBlock.textContent = ` Windspeed: ${windspeed} ${windspeedUnit}`;
   weatherDiscr.textContent = `Weather description: ${weatherDescription}`;
   
-  weatherApi.append(cityBlock, temperatureBlock, windspeedBlock,weatherDiscr);
+  weatherApi.append(wrapper, cityBlock, temperatureBlock, windspeedBlock,weatherDiscr);
 
 
 }
