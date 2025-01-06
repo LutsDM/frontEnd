@@ -26,5 +26,4 @@ uniqueIds.add(1)
 uniqueIds.add(1)
 console.log(uniqueIds)
 
-console.log(uniqueIds.size)
-111
+111222
