@@ -125,3 +125,16 @@ a {
     text-decoration: underline;
     color: #0056a3;
   }
+
+  nav {
+    display: flex;
+    gap: 300px;
+  }
+
+ .lessonsBlock {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh; 
+    margin: 0; 
+ }
